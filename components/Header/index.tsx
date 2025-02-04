@@ -22,7 +22,7 @@ const Header = () => {
   };
   useEffect(() => {
     window.addEventListener("scroll", handleSticksNavbar);
-  }, []);
+  });
 
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index) => {
