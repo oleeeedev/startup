@@ -6,6 +6,7 @@ import Video from "@/components/Video";
 import Brands from "@/components/Brands";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import Testimonials from "@/components/Testimonials";
+import Pricing from "@/components/Pricing";
 
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function Home() {
       <Brands />
       <AboutSectionOne />
       <Testimonials />
+      <Pricing />
     </>
   );
 }
