@@ -30,6 +30,33 @@ const testimonialData: Testimonial[] = [
     image: "/images/testimonials/auth-01.png",
     star: 3,
   },
+  {
+    id: 4,
+    name: "Erik Häuser3",
+    designation: "Founder @Test",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,",
+    image: "/images/testimonials/auth-02.png",
+    star: 4,
+  },
+  {
+    id: 5,
+    name: "Erik Häuser2",
+    designation: "Founder @Test",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,",
+    image: "/images/testimonials/auth-02.png",
+    star: 2,
+  },
+  {
+    id: 6,
+    name: "Erik Häuser",
+    designation: "Founder @Test",
+    content:
+      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,",
+    image: "/images/testimonials/auth-02.png",
+    star: 1,
+  },
 ];
 
 const Testimonials = () => {
