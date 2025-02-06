@@ -9,6 +9,7 @@ import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import ScrollUp from "@/components/Common/ScrollUp";
+import Contact from "@/components/Contact";
 
 
 export const metadata: Metadata = {
@@ -28,6 +29,7 @@ export default function Home() {
       <AboutSectionTwo />
       <Testimonials />
       <Pricing />
+      <Contact />
     </>
   );
 }
