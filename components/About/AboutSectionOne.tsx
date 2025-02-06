@@ -34,7 +34,7 @@ const AboutSectionOne = () => {
               <div
                 className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
                 data-wow-delay=".15s"
-                >
+              >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
                     <List text="Checkbox #1" />
@@ -48,6 +48,26 @@ const AboutSectionOne = () => {
                     <List text="Checkbox #3" />
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="w-full px-4 lg:w-1/2">
+              <div
+                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:m-0"
+                data-now-delay=".2s"
+              >
+                <Image
+                  src="/images/about/about-image.svg"
+                  alt="about-image"
+                  fill
+                  className="drop-shadow-three mx-auto max-w-full dark:hidden dark:drop-shadow-none lg:mr-0"
+                />
+                <Image
+                  src="/images/about/about-image-dark.svg"
+                  alt="about-image"
+                  fill
+                  className="drop-shadow-three mx-auto hidden max-w-full dark:block dark:drop-shadow-none lg:mr-0"
+                />
               </div>
             </div>
           </div>
