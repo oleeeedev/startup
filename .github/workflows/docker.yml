@@ -35,7 +35,10 @@ jobs:
       - name: Build Docker Image
         run: |
           docker buildx create --use
-          docker buildx build --build-arg CACHEBUST=$(date +%s) -t ghcr.io/${{ github.repository_owner }}/nextjs-app:${{ env.VERSION }} --push .
+          docker buildx build --build-arg CACHEBUST=$(date +%s) -t ghcr.io/${{ github.repository_owner }}/nextjs-app:${{ env.VERSION }} .
+
+      - name: List Docker images
+        run: docker images
 
       - name: Push Docker Image to GHCR
         run: |
