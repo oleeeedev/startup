@@ -20,25 +20,11 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR_TOKEN }}
 
-      - name: Get commit hash
-        id: commit
-        run: echo "VERSION=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
-
-      - name: Cache Docker layers
-        uses: actions/cache@v2
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-docker-${{ hashFiles('**/Dockerfile') }}
-          restore-keys: |
-            ${{ runner.os }}-docker-
-
       - name: Build Docker Image
         run: |
           docker buildx create --use
           docker buildx build --build-arg CACHEBUST=$(date +%s) -t ghcr.io/${{ github.repository_owner }}/nextjs-app:${{ env.VERSION }} .
-
-      - name: List Docker images
-        run: docker images
+          docker images  # Listet alle Bilder nach dem Build
 
       - name: Push Docker Image to GHCR
         run: |
