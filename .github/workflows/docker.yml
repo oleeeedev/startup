@@ -31,4 +31,10 @@ jobs:
 
       - name: Push Docker Image to GHCR
         run: |
+          # Sicherstellen, dass das Image existiert, bevor es gepusht wird
+          docker images
+          if [[ "$(docker images -q ghcr.io/${{ github.repository_owner }}/nextjs-app:${{ env.VERSION }})" == "" ]]; then
+            echo "Image not found, aborting push."
+            exit 1
+          fi
           docker push ghcr.io/${{ github.repository_owner }}/nextjs-app:${{ env.VERSION }}
